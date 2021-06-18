@@ -1,0 +1,27 @@
+@mixin containerCentered {
+  width: 70%;
+  margin: 0 auto;
+}
+
+@mixin containerFluid {
+  width: 100%;
+  padding: 0 55px;
+}
+
+@mixin fullContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin fontBillyOhio {
+  font-family: "Billy Ohio";
+  font-size: 100px;
+  font-weight: normal;
+  line-height: 100px;
+}
+
+@mixin responsiveFor($screen-size) {
+  @media only screen and (max-width: $screen-size) {
+    @content;
+  }
+}

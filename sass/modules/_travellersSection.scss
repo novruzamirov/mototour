@@ -1,0 +1,79 @@
+.travellers-section {
+  padding-top: 40px;
+  background-color: $background-color-gray;
+
+  &__text {
+    text-align: center;
+
+    h2 {
+      font-weight: bold;
+      font-size: 68px;
+      color: $color-primary;
+      text-transform: uppercase;
+
+      &::after {
+        content: " world wide";
+        color: $color-red;
+      }
+    }
+
+    p {
+      font-weight: normal;
+      font-size: 18px;
+      color: $color-secondary;
+    }
+  }
+
+  &__content {
+    display: flex;
+    @include containerCentered();
+    padding-top: 25px;
+    &__left {
+      background-color: #fff;
+      margin-top: 60px;
+      margin-right: 100px;
+
+      &__naming {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px;
+
+        & img {
+          margin-right: 10px;
+        }
+
+        &__text {
+          h2 {
+            font-weight: bold;
+            font-size: 23px;
+            color: $color-primary;
+          }
+
+          h5 {
+            font-weight: normal;
+            font-size: 20px;
+            color: $color-primary;
+          }
+        }
+      }
+
+      &__text {
+        padding: 0 48px;
+        p {
+          text-align: center;
+          font-weight: lighter;
+          font-size: 17px;
+          color: $color-primary;
+        }
+      }
+    }
+
+    &__right {
+      img {
+        width: 320px; //400
+      }
+    }
+  }
+}

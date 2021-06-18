@@ -1,0 +1,87 @@
+.pilots-section {
+  background-color: $background-color-gray;
+  position: relative;
+
+  &__wrapper {
+    height: 650px; //776
+    display: flex;
+
+    &__text {
+      width: 50%;
+      height: 450px; //580
+      background-color: $color-red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px; //65
+
+      h4 {
+        font-size: 40px; //50
+        text-transform: uppercase;
+      }
+
+      &__content {
+        width: 360px;
+        margin-top: 25px; //40
+
+        h5 {
+          font-size: 22px; //26
+          margin-bottom: 15px;
+        }
+
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+
+    &__pilots {
+      width: 50%;
+      height: 450px; //580
+      background-color: #fff;
+      align-self: flex-end;
+      margin-bottom: 40px; //65
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &__content {
+        display: flex;
+        color: $color-secondary;
+        align-items: center;
+        margin-top: 30px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:nth-child(2) {
+          flex-flow: row-reverse;
+        }
+
+        &__naming {
+          width: 250px;
+          margin-left: 25px;
+
+          & p {
+            font-size: 17px;
+          }
+
+          & h2 {
+            font-size: 30px; //36
+          }
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 650px;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+  }
+}

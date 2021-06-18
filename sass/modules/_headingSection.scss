@@ -1,0 +1,158 @@
+.heading {
+  @include fullContainer();
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url(~/../../assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: $color-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(100% 0, 100% 33%, 65% 58%, 0 100%, 0 0);
+    z-index: -1;
+
+    @include responsiveFor(768px) {
+      clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 0);
+      background-size: cover;
+    }
+    @include responsiveFor(576px) {
+      display: none;
+    }
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: $color-red;
+    clip-path: polygon(40% 0, 100% 0, 100% 85%, 60% 28%);
+    z-index: -1;
+
+    @include responsiveFor(768px) {
+      display: none;
+    }
+    @include responsiveFor(576px) {
+      display: grid;
+      clip-path: none;
+    }
+  }
+
+  &__navigation {
+    &__logo img {
+      @include responsiveFor(1400px) {
+        width: 175px;
+      }
+      @include responsiveFor(1200px) {
+        width: 130px;
+      }
+      @include responsiveFor(992px) {
+        width: 100px;
+      }
+      @include responsiveFor(768px) {
+        width: 80px;
+      }
+    }
+    @include containerFluid();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+
+    &__navbar {
+      display: flex;
+      align-items: center;
+
+      & ul li {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 25px;
+
+        &:last-child {
+          margin-right: 30px;
+        }
+
+        @include responsiveFor(1400px) {
+          font-size: 14px;
+        }
+        @include responsiveFor(992px) {
+          font-size: 11px;
+        }
+        @include responsiveFor(768px) {
+          font-size: 7px;
+        }
+        @include responsiveFor(576px) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      &__socials img {
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include responsiveFor(1200px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include containerCentered();
+    text-align: center;
+    margin-top: 50px;
+
+    h1 {
+      @include fontBillyOhio();
+      @include responsiveFor(1400px) {
+        font-size: 85px;
+        line-height: 80px;
+      }
+      @include responsiveFor(1200px) {
+        font-size: 70px;
+        line-height: 60px;
+      }
+      @include responsiveFor(992px) {
+        font-size: 53px;
+        line-height: 45px;
+      }
+      @include responsiveFor(768px) {
+        font-size: 40px;
+        line-height: 35px;
+      }
+    }
+
+    img {
+      margin-top: -50px;
+      @include responsiveFor(1400px) {
+        margin-top: -30px;
+        width: 820px;
+      }
+      @include responsiveFor(1200px) {
+        width: 750px;
+      }
+      @include responsiveFor(992px) {
+        width: 550px;
+      }
+      @include responsiveFor(768px) {
+        width: 400px;
+      }
+      @include responsiveFor(576px) {
+        width: 350px;
+      }
+    }
+  }
+}

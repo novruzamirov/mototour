@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Lato";
+  src: url(../assets/fonts/Lato-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../assets/fonts/Lato-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url(../assets/fonts/Lato-Light.ttf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Billy Ohio";
+  src: url(../assets/fonts/BillyOhio.ttf);
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color: #fff;
+  font-family: "Lato";
+  font-weight: normal;
+}

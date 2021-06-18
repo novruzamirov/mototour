@@ -1,0 +1,80 @@
+.tours {
+  background-image: linear-gradient(#fff, $background-color-gray);
+  padding: 65px 0;
+
+  &__wrapper {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    @include containerCentered();
+
+    &__item {
+      width: 360px;
+
+      &__image-box {
+        position: relative;
+        font-weight: bold;
+
+        & img {
+          width: 260px;
+        }
+
+        & p {
+          position: absolute;
+          bottom: 35px;
+          font-size: 45px; //56
+
+          &::before {
+            content: "\0024";
+            font-size: 25px; //36
+            margin-left: 5px;
+          }
+        }
+
+        & span {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          text-transform: uppercase;
+          margin-left: 5px;
+        }
+
+        & div {
+          width: 175px;
+          height: 185px;
+          background-color: $color-red;
+          position: absolute;
+          bottom: -20px;
+          left: -20px;
+          clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+      }
+
+      &__text-box {
+        & h5 {
+          font-size: 22px; //26
+          color: $color-primary;
+          margin-top: 50px;
+        }
+
+        & p {
+          color: $color-light-dark;
+          font-size: 17px;
+          margin-top: 15px;
+        }
+
+        & button {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: bold;
+          background-color: $color-red;
+          outline: none;
+          border: none;
+          padding: 12px 10px;
+          border-radius: 20px;
+          margin-top: 35px;
+        }
+      }
+    }
+  }
+}

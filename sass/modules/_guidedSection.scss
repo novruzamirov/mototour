@@ -1,0 +1,167 @@
+.guided-section {
+  background-image: url(~/../../assets/images/background-1880.png);
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.924);
+  position: relative;
+
+  &__text {
+    padding-top: 60px; //80
+    padding-bottom: 50px;
+
+    h3 {
+      font-weight: bold;
+      font-size: 50px; //68
+      text-transform: uppercase;
+      text-align: center;
+
+      &::after {
+        content: " since 1880";
+        color: $color-red;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      padding-top: 20px;
+      font-weight: normal;
+      font-size: 17px;
+      text-align: center;
+      line-height: 25px;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    &__img {
+      height: 600px;
+      position: absolute;
+      bottom: 35%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      margin-bottom: -40px;
+    }
+
+    &__left {
+      margin-bottom: 25px;
+      width: 50%;
+      background-color: $color-red;
+      padding-top: 100px;
+      padding-bottom: 150px;
+
+      &__distance {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 40px;
+
+        &__left {
+          margin-right: 50px;
+
+          h4 {
+            font-weight: bold;
+            font-size: 50px;
+
+            &::after {
+              content: "km";
+              font-size: 30px;
+            }
+          }
+
+          h6 {
+            margin-top: -15px;
+            margin-left: 5px;
+            font-weight: normal;
+            font-size: 28px;
+          }
+        }
+
+        &__right {
+          h2 {
+            font-size: 60px;
+            font-weight: bold;
+
+            &::after {
+              content: "km";
+              font-size: 40px;
+            }
+          }
+
+          h4 {
+            margin-top: -15px;
+            margin-left: 20px;
+            font-weight: normal;
+            font-size: 45px;
+          }
+        }
+      }
+
+      &__text {
+        width: 490px;
+        margin: 0 auto;
+        p {
+          text-align: center;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    &__right {
+      width: 50%;
+      padding-top: 60px;
+      padding-bottom: 150px;
+      &__number {
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__left {
+          h2 {
+            font-weight: bold;
+            font-size: 123px;
+          }
+
+          h4 {
+            font-weight: normal;
+            font-size: 45px;
+            margin-top: -25px;
+          }
+        }
+
+        &__right {
+          margin-left: 25px;
+
+          h4 {
+            font-weight: bold;
+            font-size: 50px;
+
+            &::after {
+              content: "km";
+              font-size: 30px;
+            }
+          }
+
+          h6 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-top: -15px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      &__text {
+        margin: 0 auto;
+        width: 490px;
+        p {
+          text-align: center;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
